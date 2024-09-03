@@ -1,10 +1,12 @@
-"use client";
+'use client';
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import './consulta.css';
 
 export default function Consulta() {
   const [searchTerm, setSearchTerm] = useState('');
   const [results, setResults] = useState([]);
+  const router = useRouter();
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -25,6 +27,10 @@ export default function Consulta() {
     setResults(filteredResults);
   };
 
+  const handleViewClick = (id) => {
+    router.push(`/historial/${id}`);
+  };
+
   return (
     <div className="consulta-container">
       <h2>Consulta de Casos</h2>
@@ -43,7 +49,7 @@ export default function Consulta() {
           results.map((result) => (
             <div key={result.id} className="resultado">
               <span>{result.name} - {result.curp}</span>
-              <button>Ver</button>
+              <button onClick={() => handleViewClick(result.id)}>Ver</button>
               <button>Actualizar</button>
               <button>Eliminar</button>
             </div>
