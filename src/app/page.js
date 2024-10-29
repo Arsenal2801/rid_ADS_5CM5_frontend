@@ -51,14 +51,6 @@ export default function Login() {
         // Guardar el token si el backend lo devuelve
         localStorage.setItem("token", data.token);
         const type_user = data.type_user;
-        const roleName = {
-          AB: "Abogado",
-          CH: "Capital Humano",
-          DI: "Director",
-          ME: "Médico",
-          PS: "Psicólogo",
-          TS: "Trabajador Social"
-        }[type_user];
          // Redirigir a la página correspondiente según el rol
          router.replace(`/ROLES/${type_user}`);
       } else {
