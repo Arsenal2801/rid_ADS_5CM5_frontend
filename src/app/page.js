@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import jwt from "jsonwebtoken";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './login.css';
 
@@ -60,13 +59,6 @@ export default function Login() {
           PS: "Psicólogo",
           TS: "Trabajador Social"
         }[type_user];
-
-         // Generar token JWT con el rol del usuario
-         const token = jwt.sign({ username, role: roleName }, process.env.NEXT_PUBLIC_JWT_SECRET);
-
-         // Guardar token en las cookies
-         document.cookie = `auth_token=${token}; path=/`;
- 
          // Redirigir a la página correspondiente según el rol
          router.replace(`/ROLES/${type_user}`);
       } else {
