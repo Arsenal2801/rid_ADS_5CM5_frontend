@@ -13,7 +13,7 @@ const CapitalHumanoPage = () => {
     localStorage.removeItem("token");
     console.log("Cerrando sesión...");
     // Redirige al usuario a la página de inicio de sesión
-    router.replace("");
+    router.replace("/");
   };
 
   return (
