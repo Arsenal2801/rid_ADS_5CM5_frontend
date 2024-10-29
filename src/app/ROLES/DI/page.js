@@ -17,7 +17,7 @@ const DirectorPage = () => {
   };
 
   return (
-    <div>
+    <div className="body">
       <h1>Bienvenido, Director</h1>
       <ul>
         <li>Consulta de reportes</li>

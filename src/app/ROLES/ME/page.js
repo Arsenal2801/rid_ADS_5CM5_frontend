@@ -17,7 +17,7 @@ const MedicoPage = () => {
   };
 
   return (
-    <div>
+    <div className="body">
       <h1>Bienvenido, Médico</h1>
       <ul>
         <li>Alta de diagnósticos</li>

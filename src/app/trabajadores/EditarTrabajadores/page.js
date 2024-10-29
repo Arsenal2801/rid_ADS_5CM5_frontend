@@ -25,6 +25,7 @@ export default function EditarUsuario({ params }) {
   };
 
   return (
+    <div className="body">
     <div className="editar-usuario-container">
       <h2>Editar Usuario</h2>
       <form onSubmit={handleSubmit}>
@@ -32,6 +33,7 @@ export default function EditarUsuario({ params }) {
         <input type="text" placeholder="Nombre" value={usuario.name} onChange={(e) => setUsuario({ ...usuario, name: e.target.value })} required />
         <button type="submit">Actualizar</button>
       </form>
+    </div>
     </div>
   );
 }

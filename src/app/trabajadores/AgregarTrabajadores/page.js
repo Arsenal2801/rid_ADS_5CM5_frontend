@@ -16,6 +16,7 @@ export default function AgregarUsuario() {
   };
 
   return (
+    <div className="body">
     <div className="agregar-usuario-container">
       <h2>Agregar Usuario</h2>
       <form onSubmit={handleSubmit}>
@@ -23,6 +24,7 @@ export default function AgregarUsuario() {
         <input type="text" placeholder="Nombre" value={name} onChange={(e) => setName(e.target.value)} required />
         <button type="submit">Agregar</button>
       </form>
+    </div>
     </div>
   );
 }

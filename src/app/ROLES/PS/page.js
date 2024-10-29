@@ -17,7 +17,7 @@ const PsicologoPage = () => {
   };
 
   return (
-    <div>
+    <div className="body">
       <h1>Bienvenido, Psicólogo</h1>
       <ul>
         <li>Alta de sesiones</li>

@@ -1,96 +1,82 @@
-.consulta-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 20px;
-    background-color: #f5f5f5;
+/* General Styles */
+.body {
+  background-color: #4B3B6B; /* Fondo morado oscuro */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF; /* Texto en blanco */
+  padding: 2rem;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  background-color: #FFFFFF; /* Fondo blanco */
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Header */
+h1 {
+  color: #FFFFFF; /* Texto blanco */
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Navbar and Links */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 1rem 0;
+}
+
+ul li a {
+  color: #FFFFFF; /* Texto blanco */
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+ul li a:hover {
+  color: #8A9A5B; /* Verde oliva */
+}
+
+/* Logout Button */
+.logout-button {
+  background-color: #8A9A5B; /* Verde oliva */
+  color: #FFFFFF; /* Texto blanco */
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+.logout-button:hover {
+  background-color: #6F8551; /* Verde oliva más oscuro */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
   }
-  
-  .consulta-container h2 {
-    margin-bottom: 20px;
-    color: black; /* Asegura que el texto del encabezado sea negro */
+
+  ul li a {
+    font-size: 1rem;
   }
-  
-  .consulta-container form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 600px;
+
+  .logout-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
   }
-  
-  .consulta-container input {
-    margin: 10px;
-    padding: 10px;
-    font-size: 16px;
-    width: 100%;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    color: black; /* Asegura que el texto del campo de búsqueda sea negro */
-  }
-  
-  .consulta-container button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-  }
-  
-  .resultados {
-    width: 100%;
-    max-width: 600px;
-    margin-top: 20px;
-  }
-  
-  .resultado {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    background-color: white;
-  }
-  
-  .resultado span {
-    color: black; /* Asegura que el texto de los resultados sea negro */
-  }
-  
-  .resultado button {
-    margin-left: 10px;
-    padding: 5px 10px;
-    cursor: pointer;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 3px;
-  }
-  
-  .resultado button:nth-child(2) {
-    background-color: #ffc107;
-  }
-  
-  .resultado button:nth-child(3) {
-    background-color: #dc3545;
-  }
-  
-  /* Estilos para mensajes de no resultados */
-  .no-resultados {
-    color: black; /* Asegura que el texto de "No se encontraron resultados" sea negro */
-    font-size: 16px;
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .consulta-titulo {
-    color: black; /* Asegura que el texto del título de consulta sea negro */
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
+}

@@ -25,6 +25,7 @@ export default function Usuarios() {
   };
 
   return (
+    <div className="body">
     <div className="usuarios-container">
       <h2>Gestión de Usuarios</h2>
       <button onClick={handleAgregarUsuario}>Agregar Usuario</button>
@@ -36,6 +37,7 @@ export default function Usuarios() {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 }

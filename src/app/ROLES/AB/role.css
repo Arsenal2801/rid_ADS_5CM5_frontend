@@ -1,96 +1,118 @@
-.consulta-container {
-    display: flex;
+/* General Styles */
+.body {
+  background-color: #4B3B6B; /* Fondo morado oscuro */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  background-color: #FFFFFF; /* Fondo blanco */
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4B3B6B; /* Morado oscuro */
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.navbar-brand {
+  color: #FFFFFF; /* Blanco */
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+  color: #8A9A5B; /* Verde oliva */
+}
+
+/* Content */
+.content {
+  text-align: center;
+}
+
+.content h1 {
+  color: #4B3B6B; /* Morado oscuro */
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* Table Styles */
+.cases-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.cases-table thead th {
+  background-color: #4B3B6B; /* Morado oscuro */
+  color: #FFFFFF; /* Blanco */
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.cases-table tbody td {
+  padding: 1rem;
+  font-size: 1rem;
+  color: #4B3B6B; /* Texto morado oscuro */
+  border-top: 1px solid #dee2e6;
+}
+
+.cases-table tbody tr:nth-child(even) {
+  background-color: #F2F2F2; /* Gris claro */
+}
+
+.cases-table tbody tr:hover {
+  background-color: #8A9A5B; /* Verde oliva */
+  color: #FFFFFF; /* Blanco */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 20px;
-    background-color: #f5f5f5;
-  }
-  
-  .consulta-container h2 {
-    margin-bottom: 20px;
-    color: black; /* Asegura que el texto del encabezado sea negro */
-  }
-  
-  .consulta-container form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 600px;
-  }
-  
-  .consulta-container input {
-    margin: 10px;
-    padding: 10px;
-    font-size: 16px;
-    width: 100%;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    color: black; /* Asegura que el texto del campo de búsqueda sea negro */
-  }
-  
-  .consulta-container button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-  }
-  
-  .resultados {
-    width: 100%;
-    max-width: 600px;
-    margin-top: 20px;
-  }
-  
-  .resultado {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    background-color: white;
-  }
-  
-  .resultado span {
-    color: black; /* Asegura que el texto de los resultados sea negro */
-  }
-  
-  .resultado button {
-    margin-left: 10px;
-    padding: 5px 10px;
-    cursor: pointer;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 3px;
-  }
-  
-  .resultado button:nth-child(2) {
-    background-color: #ffc107;
-  }
-  
-  .resultado button:nth-child(3) {
-    background-color: #dc3545;
-  }
-  
-  /* Estilos para mensajes de no resultados */
-  .no-resultados {
-    color: black; /* Asegura que el texto de "No se encontraron resultados" sea negro */
-    font-size: 16px;
     text-align: center;
-    margin-top: 20px;
   }
-  
-  .consulta-titulo {
-    color: black; /* Asegura que el texto del título de consulta sea negro */
-    font-size: 24px;
-    margin-bottom: 20px;
+
+  .navbar-menu {
+    flex-direction: column;
+    gap: 1rem;
   }
-  
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .cases-table thead th, 
+  .cases-table tbody td {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+}

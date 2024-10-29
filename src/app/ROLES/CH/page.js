@@ -17,7 +17,7 @@ const CapitalHumanoPage = () => {
   };
 
   return (
-    <div>
+    <div className="body">
       <h1>Bienvenido, Capital Humano</h1>
       <ul>
         <li>
