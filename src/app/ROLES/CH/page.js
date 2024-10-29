@@ -1,10 +1,21 @@
 "use client";
 
 import React from "react";
-import Link from "next/link"; // Importa Link para la navegación
+import { useRouter } from "next/navigation"; // Importa useRouter para la redirección
+import Link from "next/link";
 import './page.css';
 
 const CapitalHumanoPage = () => {
+  const router = useRouter();
+
+  const handleLogout = () => {
+    // Elimina el token del almacenamiento local
+    localStorage.removeItem("token");
+    console.log("Cerrando sesión...");
+    // Redirige al usuario a la página de inicio de sesión
+    router.replace("/login");
+  };
+
   return (
     <div>
       <h1>Bienvenido, Capital Humano</h1>
@@ -12,10 +23,15 @@ const CapitalHumanoPage = () => {
         <li>
           <Link href="/trabajadores/AgregarTrabajadores">Alta empleado</Link>
         </li>
-        <li>Baja de empleados</li>
-        <li>Consulta de empleados</li>
+        <li>
+          <Link href="/trabajadores/EditarTrabajadores">Editar empleado</Link>
+        </li>
+        <li>
+          <Link href="/trabajadores/Trabajadores">Trabajadores</Link>
+        </li>
         <li>Consulta de células de trabajo</li>
       </ul>
+      <button onClick={handleLogout} className="logout-button">Cerrar sesión</button>
     </div>
   );
 };
