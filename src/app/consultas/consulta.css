@@ -1,25 +1,21 @@
 /* General Styles */
-.casos-container {
+.consulta-container {
     background-color: #F2F2F2; /* Gris claro */
     padding: 20px;
     min-height: 100vh;
   }
   
-  /* Casos List */
-  .casos-list {
+  /* Result List */
+  .result-list {
     margin-top: 20px;
   }
   
-  /* Caso Item */
-  .caso-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+  /* Result Item */
+  .result-item {
     background-color: #FFFFFF; /* Fondo blanco */
-    margin-bottom: 10px;
+    padding: 10px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 2px solid #4B3B6B; /* Borde morado */
+    margin-bottom: 10px;
   }
   

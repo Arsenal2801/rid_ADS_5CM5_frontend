@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import jwt from "jsonwebtoken";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './login.css';
 
@@ -11,6 +12,7 @@ export default function Login() {
   const [errorMessage, setErrorMessage] = useState("");
   const router = useRouter();
 
+  // Función para iniciar sesión y definir redirección por rol
   const handleLogin = async (e) => {
     e.preventDefault();
     setErrorMessage(""); // Resetea mensaje de error
@@ -26,8 +28,25 @@ export default function Login() {
       const isValidUser = await fakeAuth(username, password);
       
       if (isValidUser) {
-        // Redirigir usando replace para evitar volver al login con el botón "atrás"
-        router.replace("/casos");
+        // Determinar el rol del usuario
+        const userRole = username.slice(0, 2);
+        const roleName = {
+          AB: "Abogado",
+          CH: "Capital Humano",
+          DI: "Director",
+          ME: "Médico",
+          PS: "Psicólogo",
+          TS: "Trabajador Social"
+        }[userRole];
+
+        // Generar token JWT con el rol del usuario
+        const token = jwt.sign({ username, role: roleName }, process.env.NEXT_PUBLIC_JWT_SECRET);
+
+        // Guardar token en las cookies
+        document.cookie = `auth_token=${token}; path=/`;
+
+        // Redirigir a la página correspondiente según el rol
+        router.replace(`/ROLES/${userRole}`);
       } else {
         setErrorMessage("Credenciales incorrectas, por favor verifica tus datos.");
       }
@@ -57,6 +76,8 @@ export default function Login() {
       <div className="container d-flex justify-content-center align-items-center min-vh-100">
         <div className="card login-card text-center">
           <div className="card-body">
+            <center><img src="imagenes/f_derchos_logo.png" height="100px" alt="Logo" /></center>
+            <br />
             <h2 className="card-title mb-4">Iniciar Sesión</h2>
             
             {errorMessage && (
