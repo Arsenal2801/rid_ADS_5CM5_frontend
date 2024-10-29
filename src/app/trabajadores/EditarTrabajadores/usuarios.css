@@ -1,25 +1,95 @@
-/* General Styles */
-.usuarios-container {
-    background-color: #F2F2F2; /* Gris claro */
-    padding: 20px;
-    min-height: 100vh;
-  }
-  
-  /* Usuarios List */
-  .usuarios-list {
-    margin-top: 20px;
-  }
-  
-  /* Usuario Item */
-  .usuario-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #FFFFFF; /* Fondo blanco */
-    margin-bottom: 10px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 2px solid #4B3B6B; /* Borde morado */
-  }
-  
+.consulta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.consulta-container h2 {
+  margin-bottom: 20px;
+  color: black; /* Asegura que el texto del encabezado sea negro */
+}
+
+.consulta-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.consulta-container input {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: black; /* Asegura que el texto del campo de búsqueda sea negro */
+}
+
+.consulta-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.resultados {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.resultado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  background-color: white;
+}
+
+.resultado span {
+  color: black; /* Asegura que el texto de los resultados sea negro */
+}
+
+.resultado button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+.resultado button:nth-child(2) {
+  background-color: #ffc107;
+}
+
+.resultado button:nth-child(3) {
+  background-color: #dc3545;
+}
+
+/* Estilos para mensajes de no resultados */
+.no-resultados {
+  color: black; /* Asegura que el texto de "No se encontraron resultados" sea negro */
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.consulta-titulo {
+  color: black; /* Asegura que el texto del título de consulta sea negro */
+  font-size: 24px;
+  margin-bottom: 20px;
+}

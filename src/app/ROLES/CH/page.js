@@ -3,7 +3,7 @@
 import React from "react";
 import { useRouter } from "next/navigation"; // Importa useRouter para la redirección
 import Link from "next/link";
-import './page.css';
+import './role.css';
 
 const CapitalHumanoPage = () => {
   const router = useRouter();
