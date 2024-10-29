@@ -19,17 +19,39 @@ export default function Login() {
 
     // Validaciones básicas antes de autenticación
     if (!username || !password) {
-      setErrorMessage("Por favor, ingresa un usuario y una contraseña válidos.");
+      setErrorMessage(
+        "Por favor, ingresa un usuario y una contraseña válidos."
+      );
       return;
     }
 
     try {
-      // Simulación de autenticación
-      const isValidUser = await fakeAuth(username, password);
-      
-      if (isValidUser) {
-        // Determinar el rol del usuario
-        const userRole = username.slice(0, 2);
+      // Llamada al backend para autenticación
+      const body = {
+        id_usuario: username,
+        contrasena: password,
+      };
+      const response = await fetch(
+        "http://127.0.0.1:3000/api/users/auth/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(body),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Error en la autenticación");
+      }
+
+      const data = await response.json();
+
+      if (data && data.token) {
+        // Guardar el token si el backend lo devuelve
+        localStorage.setItem("token", data.token);
+        const type_user = data.type_user;
         const roleName = {
           AB: "Abogado",
           CH: "Capital Humano",
@@ -37,38 +59,26 @@ export default function Login() {
           ME: "Médico",
           PS: "Psicólogo",
           TS: "Trabajador Social"
-        }[userRole];
+        }[type_user];
 
-        // Generar token JWT con el rol del usuario
-        const token = jwt.sign({ username, role: roleName }, process.env.NEXT_PUBLIC_JWT_SECRET);
+         // Generar token JWT con el rol del usuario
+         const token = jwt.sign({ username, role: roleName }, process.env.NEXT_PUBLIC_JWT_SECRET);
 
-        // Guardar token en las cookies
-        document.cookie = `auth_token=${token}; path=/`;
-
-        // Redirigir a la página correspondiente según el rol
-        router.replace(`/ROLES/${userRole}`);
+         // Guardar token en las cookies
+         document.cookie = `auth_token=${token}; path=/`;
+ 
+         // Redirigir a la página correspondiente según el rol
+         router.replace(`/ROLES/${type_user}`);
       } else {
-        setErrorMessage("Credenciales incorrectas, por favor verifica tus datos.");
+        setErrorMessage(
+          "Credenciales incorrectas, por favor verifica tus datos."
+        );
       }
     } catch (error) {
-      setErrorMessage("Error al iniciar sesión. Por favor, intenta nuevamente.");
+      setErrorMessage(
+        "Error al iniciar sesión. Por favor, intenta nuevamente."
+      );
     }
-  };
-
-  // Simulación de autenticación
-  const fakeAuth = async (username, password) => {
-    // Definir las credenciales válidas para cada prefijo
-    const validCredentials = {
-      "AB0001": "1234", // Abogado
-      "PS0001": "1234", // Psicólogo
-      "ME0001": "1234", // Médico
-      "TS0001": "1234", // Trabajador Social
-      "DI0001": "1234", // Director
-      "CH0001": "1234"  // Capital Humano
-    };
-
-    // Comprobar si las credenciales son válidas
-    return validCredentials[username] === password;
   };
 
   return (
