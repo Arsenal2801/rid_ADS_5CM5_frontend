@@ -13,7 +13,7 @@ const CapitalHumanoPage = () => {
     localStorage.removeItem("token");
     console.log("Cerrando sesión...");
     // Redirige al usuario a la página de inicio de sesión
-    router.replace("/login");
+    router.replace("");
   };
 
   return (
@@ -21,13 +21,13 @@ const CapitalHumanoPage = () => {
       <h1>Bienvenido, Capital Humano</h1>
       <ul>
         <li>
-          <Link href="/trabajadores/AgregarTrabajadores">Alta empleado</Link>
+          <Link href="./trabajadores/AgregarTrabajadores">Alta empleado</Link>
         </li>
         <li>
-          <Link href="/trabajadores/EditarTrabajadores">Editar empleado</Link>
+          <Link href="./trabajadores/EditarTrabajadores">Editar empleado</Link>
         </li>
         <li>
-          <Link href="/trabajadores/Trabajadores">Trabajadores</Link>
+          <Link href="./trabajadores/Trabajadores">Trabajadores</Link>
         </li>
         <li>Consulta de células de trabajo</li>
       </ul>
