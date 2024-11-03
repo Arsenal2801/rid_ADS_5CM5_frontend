@@ -1,0 +1,78 @@
+/* General Styles */
+.body {
+  background-color: #FFFFFF; /* Fondo morado oscuro */
+  font-family: 'Verdana', sans-serif;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #8C824D;
+  text-align: center;
+}
+
+h2 {
+margin: 1%;
+color: black;
+}
+
+.navbar {
+background-color: #272B73;
+opacity: 100%;
+border-color: #000000;
+border-radius: 1px;
+}
+
+.box{
+background-color: #272B73;
+color: #ffffff;
+margin-right: 2%;
+margin-left: 2%;
+border-radius: 5px;
+}
+
+p{
+margin: 2%;
+}
+
+.logo-img {
+width: 75px;
+background-color: #ffffff;
+border-radius: 100px;
+}
+
+/* Boton de buscar */
+
+.btn-outline-success {
+color: #ffff;
+border-color: #ffff;
+}
+.btn-outline-success:hover {
+color: #000000;
+background-color: #ffffff;
+border-color: #ffffff;
+}
+.btn-check:focus + .btn-outline-success, .btn-outline-success:focus {
+box-shadow: 0 0 0 0.25rem rgba(39, 43, 115, 0.5);
+}
+.btn-check:checked + .btn-outline-success, .btn-check:active + .btn-outline-success, .btn-outline-success:active, .btn-outline-success.active, .btn-outline-success.dropdown-toggle.show {
+color: #fff;
+background-color: #272B73;
+border-color: #272B73;
+}
+.btn-check:checked + .btn-outline-success:focus, .btn-check:active + .btn-outline-success:focus, .btn-outline-success:active:focus, .btn-outline-success.active:focus, .btn-outline-success.dropdown-toggle.show:focus {
+box-shadow: 0 0 0 0.25rem rgba(39, 43, 115, 0.5);
+}
+.btn-outline-success:disabled, .btn-outline-success.disabled {
+color: #272B73;
+background-color: transparent;
+}
+
+/* Fin boton de buscar */
+
+.nav-link{
+color: #fff;
+}
+
+.nav-link:hover, .nav-link:focus {
+color: #8C824D;
+}

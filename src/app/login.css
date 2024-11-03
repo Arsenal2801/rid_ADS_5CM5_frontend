@@ -1,13 +1,14 @@
 /* General Styles */
 .body {
-  background-color: #4B3B6B; /* Fondo morado oscuro */
-  font-family: 'Arial', sans-serif;
+  background-color:#ffffff;
+  font-family: 'Verdana', sans-serif;
 }
 
 /* Logo */
 .logo-img {
-  width: 100px; /* Tamaño del logo */
-  margin-top: -40px; /* Ajuste para que sobresalga de la tarjeta */
+  width: 125px;
+  background-color: #ffffff;
+  border-radius: 100px;
 }
 
 /* Container */
@@ -20,7 +21,7 @@
 
 /* Login Card */
 .login-card {
-  background-color: #FFFFFF; /* Fondo blanco */
+  background-color: #272B73;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -31,7 +32,7 @@
 
 /* Card Title */
 .card-title {
-  color: #4B3B6B; /* Morado oscuro */
+  color: #fff; /* Morado oscuro */
   font-size: 1.8rem;
   font-weight: 700;
   text-align: center;
@@ -40,7 +41,7 @@
 
 /* Form Labels */
 .form-label {
-  color: #4B3B6B; /* Morado oscuro */
+  color: #fff; /* Morado oscuro */
   font-weight: 500;
 }
 
@@ -48,7 +49,7 @@
 .form-control {
   background-color: #F2F2F2; /* Gris claro */
   border: 2px solid #4B3B6B; /* Borde morado */
-  color: #4B3B6B; /* Texto morado */
+  color: #fff; /* Texto morado */
   border-radius: 8px;
   padding: 0.75rem;
   font-size: 1rem;

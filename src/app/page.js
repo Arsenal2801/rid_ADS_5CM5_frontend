@@ -70,7 +70,7 @@ export default function Login() {
       <div className="container d-flex justify-content-center align-items-center min-vh-100">
         <div className="card login-card text-center">
           <div className="card-body">
-            <center><img src="imagenes/f_derchos_logo.png" height="100px" alt="Logo" /></center>
+            <center><img src="imagenes/f_derchos_logo.png" height="100px" alt="Logo" class="logo-img"/></center>
             <br />
             <h2 className="card-title mb-4">Iniciar Sesión</h2>
             
