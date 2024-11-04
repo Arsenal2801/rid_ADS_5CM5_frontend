@@ -21,7 +21,7 @@ const CapitalHumanoPage = () => {
     <div className="body">
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
-        <Link href="/ROLES/CH" className="navbar-brand">
+        <Link href="/roles/CH" className="navbar-brand">
             <img className="logo-img" src="../imagenes/f_derchos_logo.png" />
           </Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,13 +33,10 @@ const CapitalHumanoPage = () => {
                 <a className="nav-link" href="#">Perfil</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Registrar</a>
+                <Link className="nav-link" href="/registro_trabajador">Registrar</Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">Equipos</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Registrar</a>
               </li>
               <button onClick={handleLogout} className="btn btn-outline-success me-2" type="button">Cerrar Sesión</button>
             </ul>
