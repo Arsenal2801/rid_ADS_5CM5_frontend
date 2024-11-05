@@ -74,8 +74,8 @@ const regitrotrabajador = () => {
       <label htmlFor="contrasena">Contraseña</label>
       <input type="password" id="contrasena" name="contrasena" className="form-control" required />
 
-      <label htmlFor="foto_perfil">Foto de Perfil</label>
-      <input type="file" id="foto_perfil" name="foto_perfil" className="form-control" />
+      <label htmlFor="foto_perfil">Foto de Perfil (pendiente....)</label>
+      {/* <input type="file" id="foto_perfil" name="foto_perfil" className="form-control" /> */}
 
       <label htmlFor="id_rol">Rol</label>
       <select id="id_rol" name="id_rol" className="form-control">
