@@ -52,7 +52,7 @@ export default function Login() {
         localStorage.setItem("token", data.token);
         const type_user = data.type_user;
          // Redirigir a la página correspondiente según el rol
-         router.replace(`/ROLES/${type_user}`);
+         router.replace(`/roles/${type_user}`);
       } else {
         setErrorMessage(
           "Credenciales incorrectas, por favor verifica tus datos."

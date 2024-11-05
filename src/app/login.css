@@ -45,26 +45,26 @@
   font-weight: 500;
 }
 
-/* Form Inputs */
-.form-control {
-  background-color: #F2F2F2; /* Gris claro */
-  border: 2px solid #4B3B6B; /* Borde morado */
-  color: #fff; /* Texto morado */
-  border-radius: 8px;
-  padding: 0.75rem;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  transition: all 0.3s ease;
-}
-
-.form-control:focus {
-  border-color: #8A9A5B; /* Verde oliva */
-  box-shadow: none;
-}
-
-.form-control::placeholder {
-  color: #8A9A5B; /* Verde oliva */
-}
+  /* Form Inputs */
+  .form-control {
+    background-color: #F2F2F2; /* Gris claro */
+    border: 2px solid #272B73; /* Borde morado */
+    color: black; /* Texto morado */
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: black; /* Verde oliva */
+    box-shadow: none;
+  }
+  
+  .form-control::placeholder {
+    color: black; /* Verde oliva */
+  }
 
 /* Submit Button */
 .btn-login {
